@@ -1,0 +1,44 @@
+[project]
+name = "tenderising"
+version = "0.1.0"
+description = "GeM-only procurement-intelligence platform: curated DB + collectors + schedules"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "pymupdf>=1.24",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "httpx>=0.27",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+tenderising = "tenderising.schedule.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]  # HTML/table fixtures exceed the line-length limit
+"src/tenderising/web/*" = ["E501"]  # HTML template strings
+"src/tenderising/schedule/*" = ["E501"]  # embedded HTML dashboard string
+"src/tenderising/mcp/*" = ["E501"]  # long tool descriptions / schema text
+"src/tenderising/rag/*" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,3 +1,31 @@
-.DS_Store
-*.log
+# Python-generated files
 __pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Frontend (Node)
+node_modules/
+
+# Local databases and scraped data (never commit)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+output/
+
+# Secrets / credentials (never commit)
+credentials/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store

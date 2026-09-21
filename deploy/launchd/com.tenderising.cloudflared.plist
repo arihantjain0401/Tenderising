@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.tenderising.cloudflared</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/bin/cloudflared</string>
+		<string>tunnel</string>
+		<string>--config</string>
+		<string>/Users/amitkumarjain/.cloudflared/config.yml</string>
+		<string>run</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/amitkumarjain</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardOutPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-cloudflared.out.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-cloudflared.err.log</string>
+</dict>
+</plist>

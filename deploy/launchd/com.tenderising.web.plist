@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.tenderising.web</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/amitkumarjain/tenderising/.venv/bin/python</string>
+		<string>-m</string>
+		<string>uvicorn</string>
+		<string>tenderising.api.main:app</string>
+		<string>--host</string>
+		<string>0.0.0.0</string>
+		<string>--port</string>
+		<string>8070</string>
+	</array>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>GOOGLE_REDIRECT_URI</key>
+		<string>https://tenderising.com/api/auth/callback</string>
+	</dict>
+	<key>WorkingDirectory</key>
+	<string>/Users/amitkumarjain/tenderising</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardOutPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-web.out.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-web.err.log</string>
+</dict>
+</plist>

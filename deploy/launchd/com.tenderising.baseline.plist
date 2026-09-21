@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.tenderising.baseline</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/amitkumarjain/tenderising/.venv/bin/python</string>
+		<string>-m</string>
+		<string>tenderising.schedule.cli</string>
+		<string>baseline</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/amitkumarjain/tenderising</string>
+	<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<key>Hour</key><integer>3</integer>
+			<key>Minute</key><integer>15</integer>
+		</dict>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardOutPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-baseline.out.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/amitkumarjain/Library/Logs/tenderising-baseline.err.log</string>
+</dict>
+</plist>
